@@ -1,5 +1,3 @@
-// Post.js
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { createClient } from 'contentful';

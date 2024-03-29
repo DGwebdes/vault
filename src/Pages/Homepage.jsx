@@ -1,12 +1,10 @@
 import {createClient} from 'contentful'
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-// import Post from '../Components/Post';
 
 const client = createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
+  //This key is restricted to read-only, have fun!
   space: 'un54rechb5on',
-  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
   accessToken: 'X7bx8hE2UybkmGaclJN2Uj4SmQm9qLHg52BMGP13Bbk',
 })
 
@@ -46,7 +44,6 @@ const Homepage = () => {
                                 <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
                                 <h3 className='text-shadow'>{post.fields.title}</h3>
                             </Link>
-                            {/* <hr /> */}
                             <p><small>Date: {new Date(post.fields.publishDate).toLocaleDateString()}</small></p>
                         </li>
                     ))}
