@@ -31,8 +31,9 @@ const Post = () => {
 
   return (
     <div className="post">
-      <h2>{post.fields.title}</h2>
+      <h1>{post.fields.title}</h1>
       {/* Render Rich Text content */}
+      {/* <img src={post.fields.postImage.fields.file.url} alt="post-img" /> */}
       <div className="post-body">
         {documentToReactComponents(post.fields.content)}
       </div>

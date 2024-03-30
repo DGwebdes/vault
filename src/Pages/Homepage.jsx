@@ -42,7 +42,7 @@ const Homepage = () => {
                             <Link to={`/post/${post.sys.id}`}>
                                 <div className="spin"></div>
                                 <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
-                                <h3 className='text-shadow'>{post.fields.title}</h3>
+                                <h2 className='text-shadow'>{post.fields.title}</h2>
                             </Link>
                             <p><small>Date: {new Date(post.fields.publishDate).toLocaleDateString()}</small></p>
                         </li>
