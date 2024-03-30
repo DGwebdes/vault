@@ -26,7 +26,7 @@ const Post = () => {
   }, [postId]);
 
   if (!post) {
-    return <div>Loading...</div>;
+    return <div style={{ fontSize: 30}}>Loading...</div>;
   }
 
   return (
