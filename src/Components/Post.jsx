@@ -31,9 +31,10 @@ const Post = () => {
 
   return (
     <div className="post">
+    <div className="scroll-watcher"></div>
       <h1>{post.fields.title}</h1>
       {/* Render Rich Text content */}
-      {/* <img src={post.fields.postImage.fields.file.url} alt="post-img" /> */}
+      <img src={post.fields.postImage.fields.file.url} alt="post-img" className='posted-image' />
       <div className="post-body">
         {documentToReactComponents(post.fields.content)}
       </div>

@@ -9,7 +9,7 @@ const client = createClient({
 })
 
 
-const Homepage = () => {  
+const Homepage = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -38,7 +38,6 @@ const Homepage = () => {
                 <ul>
                     {posts.map((post) => (
                         <li key={post.sys.id}>
-                            
                             <Link to={`/post/${post.sys.id}`}>
                                 <div className="spin"></div>
                                 <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
