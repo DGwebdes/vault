@@ -7,10 +7,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg-color: #303232;
-  --ac-one: #E64C38;
-  --ac-two: #A6CAF1;
-  --ac-three: #ddc6c6;
+  --bg-color: #fcfcfc;
+  --ac-one: #ec3f38;
+  --ac-two: #2e2b2c;
+  --ac-three: #4074db;
 }
 * {
   box-sizing: border-box;
@@ -34,6 +34,7 @@ nav {
 }
 .links {
   text-decoration: none;
+  font-weight: 700;
   color: var(--ac-one);
 }
 .nav-logo {
@@ -54,6 +55,9 @@ nav {
   font-size: 144px;
   color: var(--ac-one);
   letter-spacing: -1.5px;
+
+  -webkit-text-stroke: var(--ac-two);
+	-webkit-text-stroke-width: 3px;
 }
 .hero > p {
   color: var(--ac-two);
@@ -98,6 +102,9 @@ nav {
   font-family: 'Tac One', serif;
   font-size: 84px;
   color: var(--ac-one);
+
+  -webkit-text-stroke: var(--ac-two);
+	-webkit-text-stroke-width: 2px;
 }
 .post-body {
   max-width: 900px;
@@ -161,28 +168,27 @@ nav {
 	font-style: italic;
 	text-transform: uppercase;
 	color: transparent;
-	-webkit-text-stroke: #fff;
-	-webkit-text-stroke-width: 1px;
-	text-shadow: 2px 2px 10px blue;
+	-webkit-text-stroke: var(--ac-two);
+	-webkit-text-stroke-width: 2px;
 	transition: all 0.5s ease-in-out;
 	text-align: center;
 	letter-spacing: 0.2em;
-	animation: flicker 0.5s ease-in-out infinite alternate;
+	/* animation: flicker 0.5s ease-in-out infinite alternate; */
 
 	&:hover {
-		color: #fff;
+		color: var(--ac-one);
 	}
 }
-@keyframes flicker {
+/* @keyframes flicker {
 	0% {
 		opacity: 0.5;
-		text-shadow: 2px 2px 10px blue;
+		text-shadow: 2px 2px 10px var(--ac-two);
 	}
 	100% {
 		opacity: 1;
-		text-shadow: 2px 2px 20px blue;
+		text-shadow: 2px 2px 20px var(--ac-two);
 	}
-}
+} */
 
 
 .spin {
@@ -196,9 +202,9 @@ nav {
   -webkit-animation: spin 1s ease-in-out infinite;
 
   box-shadow:
-    0 0 15px 5px #fff,  /* inner white */
-    0 0 25px 15px #f0f, /* middle magenta */
-    0 0 35px 20px #0ff; /* outer cyan */
+    0 0 15px 5px var(--ac-two),
+    0 0 25px 15px var(--ac-one),
+    0 0 35px 20px var(--ac-three);
 }
 @keyframes spin {
   to {
@@ -222,6 +228,8 @@ nav {
 
   .hero > h1 {
     font-size: 104px;
+    -webkit-text-stroke: var(--ac-two);
+	  -webkit-text-stroke-width: 2px;
   }
 
   .content > ul {
@@ -264,6 +272,8 @@ nav {
   }
   .hero > h1 {
     font-size: 84px;
+    -webkit-text-stroke: var(--ac-two);
+	  -webkit-text-stroke-width: 1px;
   }
   .hero > p {
     text-align: center;
@@ -301,8 +311,8 @@ nav {
     -webkit-animation: spin 1s ease-in-out infinite;
   
     box-shadow:
-      0 0 15px 5px #fff,  /* inner white */
-      0 0 25px 15px #f0f, /* middle magenta */
-      0 0 35px 20px #0ff; /* outer cyan */
+    0 0 15px 5px var(--ac-two),
+    0 0 25px 15px var(--ac-one),
+    0 0 35px 20px var(--ac-three);
   }
 }
