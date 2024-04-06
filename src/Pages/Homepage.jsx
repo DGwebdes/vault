@@ -1,23 +1,18 @@
-import {createClient} from 'contentful'
+import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
-
-const client = createClient({
-  //This key is restricted to read-only, have fun!
-  space: 'un54rechb5on',
-  accessToken: 'X7bx8hE2UybkmGaclJN2Uj4SmQm9qLHg52BMGP13Bbk',
-})
 
 
 const Homepage = () => {
     const [posts, setPosts] = useState([]);
+    const BASE_URL = 'https://my-blog-server-bn2n.onrender.com'
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await client.getEntries();
-                setPosts(response.items);
-                console.log(response.items)
+                const response = await axios.get(`${BASE_URL}/api/post`);
+                setPosts(response.data);
+                console.log(response.data)
             } catch (err) {
                 console.log(`Something went Wrong ${err}`)
             }

@@ -1,22 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import axios from 'axios'
 
-const client = createClient({
-  space: 'un54rechb5on',
-  accessToken: 'X7bx8hE2UybkmGaclJN2Uj4SmQm9qLHg52BMGP13Bbk',
-});
 
 const Post = () => {
   const { postId } = useParams();
   const [post, setPost] = useState(null);
+  const BASE_URL = 'https://my-blog-server-bn2n.onrender.com'
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await client.getEntry(postId);
-        setPost(response);
+        const response = await axios.get(`${BASE_URL}/api/posts/` + postId);
+        setPost(response.data);
       } catch (error) {
         console.error('Error fetching post:', error);
       }
@@ -32,16 +29,16 @@ const Post = () => {
   return (
     <div className="post">
     <div className="scroll-watcher"></div>
-      <h1>{post.fields.title}</h1>
+      <h1>{post.title}</h1>
       {/* Render Rich Text content */}
-      <img src={post.fields.postImage.fields.file.url} alt="post-img" className='posted-image' />
+      <img src={post.postImage} alt="post-img" className='posted-image' />
       <div className="post-body">
-        {documentToReactComponents(post.fields.content)}
+        {documentToReactComponents(post.content)}
       </div>
       <hr />
       <div className="info">
-        <p>Author: {post.fields.author}</p>
-        <p>Publish Date: {new Date(post.fields.publishDate).toLocaleDateString()}</p>
+        <p>Author: {post.author}</p>
+        <p>Publish Date: {new Date(post.publishDate).toLocaleDateString()}</p>
       </div>
     </div>
   );
