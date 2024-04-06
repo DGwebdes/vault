@@ -10,7 +10,7 @@ const App = () => {
                 <Header />
                 <Routes>
                     <Route path="/vault" element={<Homepage />} />
-                    <Route path="/post/:postId" element={<Post />} />
+                    <Route path="/posts/:postId" element={<Post />} />
                 </Routes>
             </div>
         </Router>

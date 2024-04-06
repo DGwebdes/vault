@@ -33,7 +33,7 @@ const Homepage = () => {
                 <ul>
                     {posts.map((post) => (
                         <li key={post.sys.id}>
-                            <Link to={`/post/${post.sys.id}`}>
+                            <Link to={`/posts/${post.sys.id}`}>
                                 <div className="spin"></div>
                                 <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
                                 <h2 className='text-shadow'>{post.fields.title}</h2>
