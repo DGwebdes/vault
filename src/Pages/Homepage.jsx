@@ -10,7 +10,7 @@ const Homepage = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get(`${BASE_URL}/api/post`);
+                const response = await axios.get(`${BASE_URL}/api/posts`);
                 setPosts(response.data);
                 console.log(response.data)
             } catch (err) {
