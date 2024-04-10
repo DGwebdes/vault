@@ -26,6 +26,7 @@ const Homepage = () => {
     }, [])
 
     return (
+     loading ? (<Spinner />) : (
         <main>
             <section className="hero">
                 <h1>Dielan&apos;s Vault.</h1>
@@ -33,25 +34,24 @@ const Homepage = () => {
                     Documenting my adventures as a developer, enthusiast and curious person.
                 </p>
             </section>
-            { loading ? (<Spinner />) : (
-                <section className="content">
-                <ul>
-                    {
-                        posts.map((post) => (
-                            <li key={post.sys.id}>
-                                <Link to={`/posts/${post.sys.id}`}>
-                                    <div className="spin"></div>
-                                    <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
-                                    <h2 className='text-shadow'>{post.fields.title}</h2>
-                                </Link>
-                                <p><small>Date: {new Date(post.fields.publishDate).toLocaleDateString()}</small></p>
-                            </li>
-                        ))
-                    }
-                </ul>
+            <section className="content">
+            <ul>
+                {
+                    posts.map((post) => (
+                        <li key={post.sys.id}>
+                            <Link to={`/posts/${post.sys.id}`}>
+                                <div className="spin"></div>
+                                <img className='post-img' src={post.fields.postImage.fields.file.url} alt="post-banner" />
+                                <h2 className='text-shadow'>{post.fields.title}</h2>
+                            </Link>
+                            <p><small>Date: {new Date(post.fields.publishDate).toLocaleDateString()}</small></p>
+                        </li>
+                    ))
+                }
+            </ul>
             </section>
-            ) }
         </main>
+    )
     );
 };
 
