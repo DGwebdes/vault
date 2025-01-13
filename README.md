@@ -241,8 +241,4 @@ cd your-repo-name
 
 ## **License**
 
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-Happy blogging! Feel free to reach out for any questions or feedback.
+This project is open-source
