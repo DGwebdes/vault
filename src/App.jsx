@@ -5,11 +5,11 @@ import Post from './Components/Post';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename='/vault'>
             <div>
                 <Header />
                 <Routes>
-                    <Route path="/vault" element={ <Homepage /> } />
+                    <Route path="/" element={ <Homepage /> } />
                     <Route path="/posts/:postId" element={<Post />} />
                 </Routes>
             </div>
