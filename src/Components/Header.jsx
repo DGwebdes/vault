@@ -5,9 +5,9 @@ const Header = () => {
     return (
         <nav>
             <Link>
-                <img className="nav-logo" src={logo} alt="logo"/>
+                <img to={'/'} className="nav-logo" src={logo} alt="logo"/>
             </Link>
-            <Link to={'/vault'} className="links">Root</Link>
+            <Link to={'/'} className="links">Root</Link>
         </nav>
     );
 };
