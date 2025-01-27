@@ -31,7 +31,7 @@ const Homepage = () => {
             <section className="hero">
                 <h1>Dielan&apos;s Vault.</h1>
                 <p>
-                    Documenting my adventures as a developer, enthusiast and curious person.
+                    Documenting my adventures as a [insert label], [adjective] and [relatable adjective] person.
                 </p>
             </section>
             <section className="content">
