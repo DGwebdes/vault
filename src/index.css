@@ -7,9 +7,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg-color: #fcfcfc;
+  --bg-color: #2e2b2c;
   --ac-one: #ec3f38;
-  --ac-two: #2e2b2c;
+  --ac-two: #fcfcfc;
   --ac-three: #4074db;
 }
 * {
@@ -135,7 +135,6 @@ nav {
   object-fit: cover;
 
   border-radius: 20px 0 20px 0;
-  box-shadow: 5px 5px 10px 10px hsla(0, 0%, 2%, 0.8);
 }
 .info {
   width: 100%;
@@ -191,10 +190,10 @@ nav {
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 
-  box-shadow:
+  /* box-shadow:
     0 0 15px 5px var(--ac-two),
     0 0 25px 15px var(--ac-one),
-    0 0 35px 20px var(--ac-three);
+    0 0 35px 20px var(--ac-three); */
 }
 @keyframes spin {
   to {
@@ -336,9 +335,9 @@ nav {
     animation: spin 1s ease-in-out infinite;
     -webkit-animation: spin 1s ease-in-out infinite;
 
-    box-shadow:
+    /* box-shadow:
     0 0 15px 5px var(--ac-two),
     0 0 25px 15px var(--ac-one),
-    0 0 35px 20px var(--ac-three);
+    0 0 35px 20px var(--ac-three); */
   }
 }
