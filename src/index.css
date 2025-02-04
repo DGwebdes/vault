@@ -87,7 +87,7 @@ nav {
   width: 270px;
   height: 270px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 
@@ -135,6 +135,7 @@ nav {
   object-fit: cover;
 
   border-radius: 20px 0 20px 0;
+  filter: contrast(200%);
 }
 .info {
   width: 100%;
