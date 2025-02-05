@@ -46,7 +46,14 @@ const Post = () => {
             <img
               src={file.url.startsWith('//') ? `https:${file.url}` : file.url}
               alt={title || 'Embedded Image'}
-              style={{ maxWidth: '360px', height: 'auto', marginTop: '10px' }}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                display: 'block',
+                margin: '20px auto',
+                borderRadius: '8px',
+                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+              }}
             />
           );
         } catch (error) {
