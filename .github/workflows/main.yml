@@ -1,0 +1,14 @@
+name: Keep Render Server Warm
+
+on: 
+  schedule:
+    - cron: '*/10 * * * *' #calls the server every tens minutes
+
+  workflow_dispatch: #allows for manual trigger
+
+jobs:
+  keep_warm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Request to Server
+        run: curl --max-time 60 -s -o /devl/null -w "%{http_code}" https://my-blog-server-bn2n.onrender.com 
