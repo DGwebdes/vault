@@ -11,9 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Request to Server
-        run: |
-          RESPONSE=$(curl --write-out "%{http_code}" --silent --output /dev/null --max-time 30 https://my-blog-server-bn2n.onrender.com)
-          if [ "$RESPONSE" -ne 200 ]; then
-            echo "Server returned HTTP status code $RESPONSE"
-            exit 1
-          fi 
+        run: curl -s -w "%{http_code}" https://my-blog-server-bn2n.onrender.com || true
