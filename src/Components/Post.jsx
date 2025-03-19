@@ -16,7 +16,6 @@ const Post = () => {
                     `${BASE_URL}/api/posts/` + postId
                 );
                 setPost(response.data);
-                console.log(response.data);
             } catch (error) {
                 console.error("Error fetching post:", error);
             }
