@@ -7,7 +7,7 @@ import Spinner from "./Spinner";
 const Post = () => {
     const { postId } = useParams();
     const [post, setPost] = useState(null);
-    const BASE_URL = "https://my-blog-server-bn2n.onrender.com";
+    const BASE_URL = "https://my-blog-server-production-35c7.up.railway.app";
 
     useEffect(() => {
         const fetchPost = async () => {
