@@ -6,7 +6,7 @@ import Spinner from "../Components/Spinner";
 const Homepage = () => {
     const [loading, setLoading] = useState(true);
     const [posts, setPosts] = useState([]);
-    const BASE_URL = "https://my-blog-server-production-35c7.up.railway.app/";
+    const BASE_URL = "https://my-blog-server-production-35c7.up.railway.app";
 
     useEffect(() => {
         const fetchPosts = async () => {
